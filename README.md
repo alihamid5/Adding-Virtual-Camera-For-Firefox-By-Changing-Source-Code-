@@ -17,7 +17,7 @@ Download the Source from Mozilla Website:
 
 https://firefox-source-docs.mozilla.org/setup/windows_build.html
 
-The above is Mozilla Firefox Official source code Downloading software link, Download the "MozillaBuild" Software from thier and install it, Then to download the soruce from that software, the link i provided have compltete guides for. but for the seek of ease for you. after installing the "MozillaBuild" it will create a folder by name "mozilla-build" in your "C:/ Drive" Main Directory. go to "C:/mozilla-build" and run "bootstrap.py" as Administrator in Win or as Sudo in Linux. Then run these commands 
+The above is Mozilla Firefox Official source code Downloading software link, Download the "MozillaBuild" Software from thier and install it, Then to download the soruce from that software, the link i provided have compltete guides for. but for the seek of ease for you. after installing the "MozillaBuild" it will create a folder by name "mozilla-build" in your "C:/ Drive" Main Directory. go to "C:/mozilla-build" and run "start-shell" as Administrator in Win or as Sudo in Linux. Then run these commands 
 
 # Using the C:\mozilla-build\start-shell.bat shell from step 1:
 cd c:/
@@ -121,7 +121,7 @@ Now all the modification in the code is completed, and you just need to install 
     zip \
     zlib1g-dev
      
-   # For WebRTC (additional):
+  # For WebRTC (additional):
    sudo apt-get install \
     libglib2.0-dev \
     libssl-dev \
@@ -132,4 +132,4 @@ Now all the modification in the code is completed, and you just need to install 
 
 STEP 5:
 
-Now all the Dependencies and Modification in Source Code, so this time to star
+Now all the Dependencies and Modification in Source Code have been completed, so this is the time to start compiling and use your final product. 
