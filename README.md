@@ -130,6 +130,24 @@ Now all the modification in the code is completed, and you just need to install 
     "
 ---------------------------------------------------------
 
-STEP 5:
+STEP 5: 
 
-Now all the Dependencies and Modification in Source Code have been completed, so this is the time to start compiling and use your final product. 
+ Now all the Dependencies and Modification in Source Code have been completed, so this is the time to start compiling and use your final product.
+ Go again to the "C:/mozilla-build" folder and run the "start-shell" as administrator, it will run the "Mozilla build" terminal.
+ Run these three Commands step by step in the "Mozilla Build" terminal.
+  1) ./mach configure
+  2) ./mach build
+  3) ./mach package
+
+on succesful completion of these commands. your custom firefox will be ready to use. 
+
+STEP 6:
+
+1. Now go to the "C:/mozilla-source/mozilla-unified/obj-x86_64-pc-linux-gnu/dist"
+2. Here you will find a ZIP package of your Custom Ready to use Mozilla Firefox Browser.
+3. Extract the zip at your Desired Location in any Win/Linux device.
+4. Open the folder and Run the "Firefox.exe".
+5. It will Open the firefox, now check your virtual camera, by going to any site which require camera access. or goto "https://webcamtests.com/"
+6. Remember you can adjust the running video by up, down, left, right keys if you are performing your desired activity.
+  
+
