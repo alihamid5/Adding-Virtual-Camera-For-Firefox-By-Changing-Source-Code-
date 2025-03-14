@@ -1,6 +1,6 @@
 (Due to technical issues, the search service is temporarily unavailable.)
 
-# Adding a Virtual Camera Inside Firefox by Modifying the Source Code
+# Adding a Virtual Camera Inside Firefox Browser by Modifying the Source Code
 
 This project integrates a virtual camera into Mozilla Firefox's source code. The virtual camera allows users to play custom videos in Y4M format through Firefox's camera interface. Physical camera initialization is blocked, ensuring only the virtual camera is accessible.
 
