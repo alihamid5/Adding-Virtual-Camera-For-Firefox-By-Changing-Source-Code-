@@ -22,70 +22,76 @@ STEP 6: TESTING
 
 STEP 1: DOWNLOADING SOURCE CODE
 
-1) Download the Source from Mozilla Website:
+1. Download the Source from Mozilla Website "https://firefox-source-docs.mozilla.org/setup/windows_build.html"
 
-https://firefox-source-docs.mozilla.org/setup/windows_build.html
+2. The above is Mozilla Firefox Official Link of "source code Downloading software", Download the "MozillaBuild" Software from the provided, and install it.
+3. Then to download the source code from that software, the link i provided have compltete guides for this downloading process. but for the seek of ease for you. after 
+   installing the "MozillaBuild" it will create a folder by name "mozilla-build" in your "C:/ Drive" Main Directory.
+4. Go to the "C:/mozilla-build" and run "start-shell" as Administrator in Win or as Sudo in Linux. It will open the Mozilla Build Terminal. Then run these commands in that terminal.
 
-The above is Mozilla Firefox Official source code Downloading software link, Download the "MozillaBuild" Software from thier and install it, Then to download the soruce from that software, the link i provided have compltete guides for. but for the seek of ease for you. after installing the "MozillaBuild" it will create a folder by name "mozilla-build" in your "C:/ Drive" Main Directory. go to "C:/mozilla-build" and run "start-shell" as Administrator in Win or as Sudo in Linux. Then run these commands 
+   # Using the C:\mozilla-build\start-shell.bat shell from step 1:
+   cd c:/
+   mkdir mozilla-source
+   cd mozilla-source
+   wget https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py
+   
+   # To use Git as your VCS
+   python3 bootstrap.py --vcs=git
 
-# Using the C:\mozilla-build\start-shell.bat shell from step 1:
-cd c:/
-mkdir mozilla-source
-cd mozilla-source
-wget https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py
+   # To use Mercurial as your VCS
+   python3 bootstrap.py
 
-# To use Git as your VCS
-python3 bootstrap.py --vcs=git
-
-# To use Mercurial as your VCS
-python3 bootstrap.py
-
-The bootstrap.py is the script that will download the complete source code of firefox (from the beginning of the Firefox till now, all source code) in "C:/mozilla-source/mozilla-unified/", In "mozilla-unified," your source code is available and all the modification is going to be there.
+5. The bootstrap.py is the script that will download the complete source code of firefox (from the beginning of the Firefox till now, all source code) in "C:/mozilla-source/mozilla-unified/", In "mozilla-unified," your source code is available and all the modification is going to be there.
 
 ---------------------------------------------------------
 
 STEP 2: REPLACING THE MODIFIED FILES IN SOURCE CODE
 
-After Successfully Downloading the source code, our step 2 starts from here, now we have to do modification in source code, there are 6 Targeted file which we have to replace in source code, and all the file with modified code i have attact above. The exact location to replace each file is Mention Below.
+1. After Successfully Downloading the source code, our step 2 starts from here
+2. Now we have to do modification in source code, there are 6 Targeted file which we have to replace in source code, and all the file with modified code i have attacted above. The exact location to replace each file is mentioned below.
 
 1st Replacement:
 
-C:\mozilla-source\mozilla-unified\dom\media\webrtc  -  Open this Directory and Replace 4 files mention below
+  C:\mozilla-source\mozilla-unified\dom\media\webrtc  -  Open this Directory and Replace 4 files mention below
 
- 1) MediaEngineWebRTC.cpp
- 2) MediaEngineRemoteVideoSource.cpp
- 3) MediaEngineRemoteVideoSource.h
-
+   1) MediaEngineWebRTC.cpp
+   2) MediaEngineRemoteVideoSource.cpp
+   3) MediaEngineRemoteVideoSource.h
+   4) moz.build
+   
 2nd Replacement:
 
-C:\mozilla-source\mozilla-unified   -  Open this Directory and Replace 1 file mention below
+  C:\mozilla-source\mozilla-unified   -  Open this Directory and Replace 1 file mention below
 
- 1) mozconfig (if you are on linux, then you need to first unhide the hidden files in "mozilla-unified" and then find the ".mozconfig" file"
+   1) mozconfig (if you are on linux, then you need to first unhide the hidden files in "mozilla-unified" and then find the ".mozconfig" file"
 
 3rd Replacement:
 
-C:\mozilla-source\mozilla-unified\browser\installer  -  Open this Directory and Replace 1 file mention below
+  C:\mozilla-source\mozilla-unified\browser\installer  -  Open this Directory and Replace 1 file mention below
 
- 1) package-manifest.in
+   1) package-manifest.in
 
 ---------------------------------------------------------
 
 STEP 3: DOWNLOADING FFMPEG DEPENDENCIES
 
-Download This for "ffmpeg-master-latest-win64-gpl-shared.zip" From "https://github.com/btbn/ffmpeg-builds/releases" but according to your OS and Architecture.
-If your creating this for windows 64x. then the i mention i for you other wise on the same page you will its different models as well like "ffmpeg-master-latest-linux64-lgpl-shared.tar.xz and" for Linux x64 or "ffmpeg-master-latest-linuxarm64-gpl-shared.tar.xz" for Linux Arm Architecture.
+1. Download This for "ffmpeg-master-latest-win64-gpl-shared.zip" From "https://github.com/btbn/ffmpeg-builds/releases" but according to your OS and Architecture.
+   
+2. If your creating this for windows 64x. then the name i mention for you, you have to use, other wise on the same page you will its different models as well like 
+   "ffmpeg-master-latest-linux64-lgpl-shared.tar.xz and" for Linux x64 or "ffmpeg-master-latest-linuxarm64-gpl-shared.tar.xz" for Linux Arm Architecture.
 
-Then unzip it and you will get this folder "ffmpeg-master-latest-win64-gpl-shared" in this folder you will see "include" and "lib" then copy these two folders and then create folder by name of "bin" Inisde your main directory of "mozilla-unified" and then create one more folder inside the "bin" folder by name of "ffmpeg" and then Paste here the "include" and "lib" folders. now go back to the "ffmpeg-master-latest-win64-gpl-shared" folder and go to the bin folder inside it. form here you will see lots of ".dll" files. you have to copy the 4 ".dll" file from here. names are mentioned below.
+3. Then unzip it and you will get this folder "ffmpeg-master-latest-win64-gpl-shared" in this folder you will see "include" and "lib" then copy these two folders and then create folder by name of "bin" Inisde your main directory of "mozilla-unified".
+4. And then create one more folder inside the "bin" folder by name of "ffmpeg" and then Paste here the "include" and "lib" folders.
+5. now go back to the "ffmpeg-master-latest-win64-gpl-shared" folder and go to the bin folder. Inside this folder you will see lots of ".dll" files. you have to copy 
+   the 4 ".dll" file from here. names are mentioned below.
+   1) avcodec-61.dll
+   2) avformat-61.dll
+   3) avutil-59.dll
+   4) swscale-8.dll"
 
+6. Find these files one by one and copy to this folder "/mozilla-unified/bin/ffmpeg/", 
 
- 1) avcodec-61.dll
- 2) avformat-61.dll
- 3) avutil-59.dll
- 4) swscale-8.dll"
-
-Find these files one by one and copy to this folder "/mozilla-unified/bin/ffmpeg/", 
-
-Also, put your desired Y4M format video inside "/mozilla-unified/bin/ffmpeg/", which you want to use as the virtual camera.
+7. Also, put your desired Y4M format video inside "/mozilla-unified/bin/ffmpeg/", which you want to use as the virtual camera.
 
 NOTE: 
  + here is tiny catch, that these files "ffmpeg-master-latest-win64-gpl-shared.zip" are constantly update with the passage of time.
@@ -150,7 +156,7 @@ STEP 5: COMPILATION
    2) ./mach build
    3) ./mach package
 
-on succesful completion of these commands. your custom firefox will be ready to use. 
+4. On successful completion of these commands. your custom firefox will be ready to use. 
 
 ---------------------------------------------------------
 
