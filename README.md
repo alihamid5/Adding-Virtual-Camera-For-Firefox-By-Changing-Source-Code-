@@ -3,8 +3,10 @@ In this project, I have integrate a virtual camera in the source code of mozilla
 
 # Objective:
  1) A Virtual Camera which can run our desired video
- 2) That video while running through virtual camera on on any website can be adjusted through up, down, right and left keys.
- 3) Physical Camera should denied or not initialized.
+ 2) The Virtual Camera should be stealthy and cannot be able to detect by security system of any website, whether financial, banking, private or goverment website.
+ 3) That video while running through virtual camera on on any website can be adjusted through up, down, right and left keys.
+ 4) The flexibilty to change the video in the browser to change desired videos in virtual camera.
+ 5) Physical Camera should be denied or not initialized.
 
 The source code need to be change in 6 Files. I have Provide the complete Modified files. You just need to replace the files and compile the browser to use.
 
@@ -168,5 +170,16 @@ STEP 6: TESTING
 4. Open the folder and Run the "Firefox.exe".
 5. It will Open the firefox, now check your virtual camera, by going to any site which require camera access. or goto "https://webcamtests.com/"
 6. Remember you can adjust the running video by up, down, left, right keys if you are performing your desired activity.
+
+
+****************************************************************************************************
+
+Now Enjoy it, Use it for Educational Purposes, and be careful with use and adhere to the compliance, rules, laws and ethics.
+
+In this Process you can possibily get several issues if you are non I.T person.
+
+so contact me at "m.alihamid763@gmail.com" if you face any type of difficulty
+
+THANK YOU
   
 
