@@ -29,17 +29,12 @@ STEP 1: DOWNLOADING SOURCE CODE
    installing the "MozillaBuild" it will create a folder by name "mozilla-build" in your "C:/ Drive" Main Directory.
 4. Go to the "C:/mozilla-build" and run "start-shell" as Administrator in Win or as Sudo in Linux. It will open the Mozilla Build Terminal. Then run these commands in that terminal.
 
-   # Using the C:\mozilla-build\start-shell.bat shell from step 1:
-   cd c:/
+   "cd c:/
    mkdir mozilla-source
    cd mozilla-source
-   wget https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py
-   
-   # To use Git as your VCS
+   wget https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/bootstrap.py   
    python3 bootstrap.py --vcs=git
-
-   # To use Mercurial as your VCS
-   python3 bootstrap.py
+   python3 bootstrap.py"
 
 5. The bootstrap.py is the script that will download the complete source code of firefox (from the beginning of the Firefox till now, all source code) in "C:/mozilla-source/mozilla-unified/", In "mozilla-unified," your source code is available and all the modification is going to be there.
 
